@@ -6,7 +6,6 @@ import Impact from "../components/Impact";
 import AboutSection from "../components/AboutSection";
 import HowItWorks from "../components/HowItWorks";
 import Sustainability from "../components/Sustainability";
-import Partners from "../components/partners";
 import PartnerCTA from "../components/PartnerCTA";
 import Footer from "../components/Footer";
 
