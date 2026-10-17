@@ -7,8 +7,8 @@ import {
 } from "lucide-react";
 
 import IrrigationImage from "../assets/irrigation.png";
-import IotImage from "../assets/iot.png";
-import HorticultureImage from "../assets/irrigation.png";
+import IotImage from "../assets/Iot.png";
+import HorticultureImage from "../assets/Horticulture.png";
 
 const focusAreas = [
   {
