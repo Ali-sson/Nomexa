@@ -41,7 +41,6 @@ const Home = () => {
     <AboutSection/>
     <HowItWorks/>
     <Sustainability/>
-    <Partners/>
     <PartnerCTA/>
     <Footer/>
 
