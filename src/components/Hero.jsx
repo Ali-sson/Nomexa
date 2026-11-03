@@ -10,6 +10,9 @@ const Hero = ({
   secondaryButtonLink = "/partnerships",
   badgeTitle = "Clean Energy. Productive Farms.",
   badgeDescription = "Resilient Communities.",
+  showCTA = true,
+  showBadge = true,
+
 }) => {
   return (
     <section
@@ -37,13 +40,15 @@ const Hero = ({
           </p>
 
           {/* CTA buttons */}
-          <div className="mt-7 flex flex-wrap items-center gap-3">
-            <a
-              href={primaryButtonLink}
-              className="inline-flex items-center gap-3 rounded-full bg-[#78BE44] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#046B12]"
-            >
+          {showCTA && (
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <a
+                href={primaryButtonLink}
+                className="inline-flex items-center gap-3 rounded-full bg-[#78BE44] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#046B12]"
+              >
               {primaryButtonText}
-              <span aria-hidden="true">→</span>
+           <span aria-hidden="true">→</span>
+            
             </a>
 
             <a
@@ -53,14 +58,16 @@ const Hero = ({
               {secondaryButtonText}
             </a>
           </div>
+          )}
         </div>
       </div>
 
       {/* Sustainability badge */}
-      <div className="absolute bottom-5 right-5 z-10 hidden max-w-[235px] items-center gap-3 rounded-xl bg-white px-4 py-3 shadow-lg sm:flex md:bottom-8 md:right-8">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#EAF5E3] text-xl">
-          🌱
-        </div>
+      {showBadge && (
+        <div className="absolute bottom-5 right-5 z-10 hidden max-w-[235px] items-center gap-3 rounded-xl bg-white px-4 py-3 shadow-lg sm:flex md:bottom-8 md:right-8">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#EAF5E3] text-xl">
+            🌱
+          </div>
 
         <div>
           <p className="text-xs font-bold text-gray-900">
@@ -71,6 +78,7 @@ const Hero = ({
           </p>
         </div>
       </div>
+      )}
     </section>
   );
 };

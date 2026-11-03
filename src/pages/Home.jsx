@@ -34,6 +34,9 @@ const Home = () => {
       secondaryButtonLink="/partnerships"
       badgeTitle="Clean Energy. Productive Farms."
       badgeDescription="Resilient Communities."
+      showCTA={true}
+      showBadge={true}
+
     />
 
     <FocusAreas />

@@ -27,6 +27,8 @@ const AboutSection = ({
   description = "Nomexa Solutions is a climate-smart agricultural technology company committed to transforming agriculture in Africa. We develop practical, scalable and sustainable solutions that empower farmers, optimise resource use and strengthen resilience to climate change.",
   image = AboutImage,
   imageAlt = "Agricultural professional using digital technology in a greenhouse",
+  cta = true,
+  coreValues = true,
 }) => {
   return (
     <section className="bg-white px-5 py-16 sm:px-8 lg:px-16 lg:py-20">
@@ -69,18 +71,23 @@ const AboutSection = ({
           </p>
 
           {/* CTA */}
-          <Link
-            to="/about"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#087D3D] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#046B12]"
-          >
-            Our Story
+
+          {cta && (
+            <Link
+              to="/about"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#087D3D] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#046B12]"
+            >
+              Our Story
             <ArrowRight size={16} />
           </Link>
+          )}
 
           {/* Core values */}
-          <div className="mt-9 grid grid-cols-1 gap-5 border-t border-gray-100 pt-7 sm:grid-cols-3 sm:gap-4">
-            {values.map((value) => {
-              const Icon = value.icon;
+
+          {coreValues && (
+            <div className="mt-9 grid grid-cols-1 gap-5 border-t border-gray-100 pt-7 sm:grid-cols-3 sm:gap-4">
+              {values.map((value) => {
+                const Icon = value.icon;
 
               return (
                 <div
@@ -104,6 +111,7 @@ const AboutSection = ({
               );
             })}
           </div>
+          )}
         </div>
 
       </div>
