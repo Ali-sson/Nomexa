@@ -30,8 +30,10 @@ function About() {
       badgeDescription={false}
      showCTA={false}
      showBadge={false}
+    heroImageClassName="relative flex min-h-[540px] items-center overflow-hidden bg-cover bg-left md:min-h-[600px] lg:min-h-[620px]"
     
     />
+
 <AboutSection
   eyebrow="OUR STORY"
   title="Building Solutions for Real-World Challenges"

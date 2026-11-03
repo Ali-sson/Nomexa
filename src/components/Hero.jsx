@@ -12,11 +12,12 @@ const Hero = ({
   badgeDescription = "Resilient Communities.",
   showCTA = true,
   showBadge = true,
+  heroImageClassName = "",
 
 }) => {
   return (
     <section
-      className="relative flex min-h-[540px] items-center overflow-hidden bg-cover bg-center md:min-h-[600px] lg:min-h-[620px]"
+      className={`relative flex min-h-[540px] items-center overflow-hidden bg-cover bg-center md:min-h-[600px] lg:min-h-[620px] ${heroImageClassName}`}
       style={{
         backgroundImage: `url(${backgroundImage})`,
       }}
