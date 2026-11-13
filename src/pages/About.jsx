@@ -3,6 +3,10 @@ import HeroImage from "../assets/HeroImage.png";
 import AboutSection from "../components/AboutSection";
 import TeamImage from "../assets/TeamWork.png";
 import Footer from "../components/Footer";
+import VisionMissionValues from "../components/VisionMissionValues";
+import Sustainability from "../components/Sustainability";
+import {Sprout, SolarPanel, ChartNoAxesCombined, UsersRound } from "lucide-react";
+import TeamSection from "../components/TeamSection";
 
 
 function About() {
@@ -50,6 +54,40 @@ function About() {
   cta={false}
   coreValues={false}
 />
+
+<VisionMissionValues/>
+
+<Sustainability
+  eyebrow="Our Approach"
+  title="Technology For People, Farms and the Planet"
+  description="We take an integrated approach, combining renewable energy, digital technology and modern agricultural systems to deliver solutions that are practical, scalable and inclusive."
+  buttonText="Explore Our Technology"
+  buttonLink="/technology"
+  solutions={[
+    {
+      title: "Renewable Energy",
+      description: "Clean, reliable power for agriculture productivity.",
+      icon: SolarPanel,
+    },
+    {
+      title: "Digital Innovation",
+      description: "Data-driven tools for smarter farming decisions.",
+      icon: ChartNoAxesCombined,
+    },
+    {
+      title: "Modern Growing Systems",
+      description: "Efficient and resilient agricultural production.",
+      icon: Sprout,
+    },
+    {
+      title: "Inclusive Growth",
+      description: "Opportunities for farmers, women and youth.",
+      icon: UsersRound,
+    },
+  ]}
+/>
+
+<TeamSection/>
 
 
 <Footer/>

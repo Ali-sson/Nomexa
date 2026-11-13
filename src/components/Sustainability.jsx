@@ -9,7 +9,7 @@ import {
 import BackgroundImage from "../assets/farmland.png";
 import { Link } from "react-router-dom";
 
-const solutions = [
+const defaultSolutions = [
   {
     title: "Sustainable Food Systems",
     description:
@@ -41,6 +41,10 @@ const Sustainability = ({
   eyebrow = "",
   title = "A More Sustainable and Food-Secure Africa",
   description = "We envision a future where every farming community has access to the technology, knowledge and support they need to produce food sustainably and thrive despite climate challenges.",
+  buttonText = "Our Impact",
+  buttonLink = "/about",
+  showButton = true,
+  solutions = defaultSolutions,
 }) => {
   return (
     <section className="relative overflow-hidden bg-[#073B26] px-5 py-14 text-white sm:px-8 sm:py-16 lg:px-16 lg:py-20">
@@ -73,16 +77,18 @@ const Sustainability = ({
             {description}
           </p>
 
-          <Link
-            to="/about"
-            className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#36B65B] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#269447]"
-          >
-            Our Impact
-            <ArrowRight
-              size={17}
-              className="transition-transform group-hover:translate-x-1"
-            />
-          </Link>
+         {showButton && (
+  <Link
+    to={buttonLink}
+    className="group mt-7 inline-flex items-center gap-2 rounded-full bg-[#36B65B] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-[#269447]"
+  >
+    {buttonText}
+    <ArrowRight
+      size={17}
+      className="transition-transform group-hover:translate-x-1"
+    />
+  </Link>
+)}
         </div>
 
         {/* Right solution cards */}
